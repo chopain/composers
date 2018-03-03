@@ -1,20 +1,30 @@
-<div class="container" style="margin-top:50px;">
-  <div class="row" style="background-color: aliceblue">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 ><%= @composer.name %></h3>
-          <div class="col-md-3">
+<!--<div class="container" style="margin-top:50px;">-->
+  <!--<div class="row" style="background-color: aliceblue">-->
+    <!--<div class="col-md-3"></div>-->
+    <!--<div class="col-md-6">-->
+      <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+          <!--<h3 ><%= @composer.name %></h3>-->
+          <!--<div class="col-md-3">-->
 
-            <%= link_to image_tag(@composer.profile_pic.url(:small), style: 'border-radius: 50%;')%>
-          </div>
-          <div class="col-md-9">
+            <!--<%= link_to image_tag(@composer.profile_pic.url(:small), style: 'border-radius: 50%;')%>-->
+          <!--</div>-->
+          <!--<div class="col-md-9">-->
 
-          </div>
+          <!--</div>-->
+        <!--</div>-->
+
+      <!--</div>-->
+
+  <!--</div>-->
+<!--</div>-->
+  <div class="content">
+    <div class="card">
+      <div class="firstinfo"><%= image_tag(@composer.profile_pic.url(:thumb), style: 'border-radius: 50%;')%>
+        <div class="profileinfo">
+          <h1><%= @composer.name %></h1>
+          <p class="bio"><%= @composer.bio %></p>
         </div>
-
       </div>
-
+    </div>
   </div>
-</div>

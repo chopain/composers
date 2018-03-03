@@ -1,0 +1,161 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+/* universal */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  line-height: 1.3em;
+
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+div {
+  .field {
+    padding: 4px;
+  }
+
+}
+
+.form-control {
+  padding: 4px;
+}
+/* header */
+
+#members {
+  padding: 0;
+  margin: 0;
+  //list-style: none;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-nav {
+  box-sizing: border-box;
+}
+
+.navbar-nav li > a {
+  background: none ! important
+}
+
+.title-name {
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.6px !important;
+  line-height: 44px !important;
+  padding-bottom: 6px !important;
+  padding-top: 6px !important;
+  word-wrap: break-word !important;
+
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+#li-first {
+  display:none
+}
+
+.rule-field {
+  width: 4em !important;
+  text-align: left;
+}
+
+rule {
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.links {
+  padding-top: 1em;
+}

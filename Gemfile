@@ -10,6 +10,7 @@ gem 'jquery-rails', '4.1.1'
 gem 'paperclip', '~> 5.2.1'
 
 gem 'simple_form'
+gem 'cocoon'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

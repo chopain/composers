@@ -1,0 +1,34 @@
+<div class="text-center">
+  <%= image_tag @composer.profile_pic.url(:medium) %>
+</div>
+<div class="form-wrapper">
+  <%= simple_form_for @composer, html: { class: 'form-horizontal', multipart: true } do |f| %>
+      <div class="form-group">
+        <%= f.input :profile_pic %>
+      </div>
+      <div class="form-group text-center">
+        <%= f.input :name %>
+      </div>
+      <div class="form-group text-center">
+        <%= f.input :bio %>
+      </div>
+
+      <div id="compositions">
+        <%= f.simple_fields_for :compositions do |comp| %>
+          <%= render 'composition_fields', f: comp %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association 'Add Composition', f, :compositions %>
+        </div>
+      </div>
+
+      <div class="form-group text-center">
+        <%= f.button :submit, class: 'btn-success' %>
+      </div>
+  <% end %>
+</div>
+<div class="text-center edit-links">
+  <%= link_to "Delete Composer", composer_path(@composer), method: :delete, data: { confirm: "Are you sure you want to delete this composer?" } %>
+  |
+  <%= link_to "cancel", root_path %>
+</div>

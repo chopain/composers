@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303014240) do
+ActiveRecord::Schema.define(version: 20180313051537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,4 +26,16 @@ ActiveRecord::Schema.define(version: 20180303014240) do
     t.datetime "profile_pic_updated_at"
   end
 
+  create_table "compositions", force: :cascade do |t|
+    t.string "name"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "composer_id"
+    t.string "link"
+    t.string "version"
+    t.index ["composer_id"], name: "index_compositions_on_composer_id"
+  end
+
+  add_foreign_key "compositions", "composers"
 end

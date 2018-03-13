@@ -1,8 +1,8 @@
 <div class="col-sm-3">
-  <div class="circle circle1">
+  <div class="circle circle2">
     <%= link_to composer.name, composer, id: 'composer-name' %>
     <% if composer.profile_pic.exists? %>
-        <!--<%= link_to image_tag(composer.profile_pic.url(:small), class: 'composer-thumb')%>-->
-    <% end %>
+        <%= link_to image_tag(composer.profile_pic.url(:small), class: 'composer-thumb'), composer%>
+  <% end %>
   </div>
 </div>
